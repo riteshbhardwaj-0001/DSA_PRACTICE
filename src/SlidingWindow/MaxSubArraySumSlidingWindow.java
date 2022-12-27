@@ -1,3 +1,5 @@
+package SlidingWindow;
+
 public class MaxSubArraySumSlidingWindow {
     public static void main(String[] args) {
         int size=6;
