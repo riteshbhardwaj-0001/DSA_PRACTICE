@@ -1,3 +1,5 @@
+package Practice_Programs;
+
 import java.util.Arrays;
 
 public class RearrageArray {
