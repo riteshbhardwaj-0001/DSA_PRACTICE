@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class MinimumWindowSubstring {
     public static void main(String[] args) {
-        String s="totmtaptat";
+        String s="tabctttmtapt";
         String t="tta";
         int size=fun(s,t);
         System.out.println(size);
@@ -24,10 +24,12 @@ public class MinimumWindowSubstring {
                     count--;
                 }
                 ew++;
+            }else{
+                ew++;
             }
             if(count==0){
-                size=Math.min(size,ew-sw+1);
-                while(count<1){
+                while(count==0){
+                    size=Math.min(size,ew-sw);
                     if(map.containsKey(s.charAt(sw))){
                         map.put(s.charAt(sw),map.get(s.charAt(sw))+1);
                         if(map.get(s.charAt(sw))>0){
@@ -36,7 +38,6 @@ public class MinimumWindowSubstring {
                     }
                     sw++;
                 }
-                ew++;
             }
         }
         return size;
